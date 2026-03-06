@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="آسيا ستور - متجر مليء بالتطور. وجهتك المميزة لأحدث الأجهزة الذكية وحلول التكنولوجيا المتطورة في العراق">
+  <meta name="keywords" content="آسيا ستور, Asia Store, تقنية, هواتف ذكية, لابتوب, ساعات ذكية, عراق, بغداد">
+  <title>آسيا ستور | Asia Store - متجر مليء بالتطور</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Outfit:wght@300;400;500;600;700;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+  <!-- Page Transition -->
+  <div class="page-transition">
+    <div class="panel"></div>
+    <div class="panel"></div>
+    <div class="panel"></div>
+    <div class="panel"></div>
+    <div class="panel"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container container--wide">
+      <a href="index.html" class="header__logo">
+        <img src="assets/logo.svg" alt="Asia Store Logo">
+        <span class="header__logo-text">Asia Store</span>
+      </a>
+
+      <nav class="header__nav" id="mainNav">
+        <ul class="header__nav-list">
+          <li><a href="index.html" class="header__nav-link active" data-i18n="nav_home">الرئيسية</a></li>
+          <li><a href="pages/products.html" class="header__nav-link" data-i18n="nav_products">المنتجات</a></li>
+          <li><a href="pages/about.html" class="header__nav-link" data-i18n="nav_about">من نحن</a></li>
+          <li><a href="pages/contact.html" class="header__nav-link" data-i18n="nav_contact">تواصل معنا</a></li>
+        </ul>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="ar">عربي</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero noise-overlay" id="hero">
+    <div class="hero__bg">
+      <img src="assets/images/hero-tech.png" alt="Tech Devices" class="hero__bg-image">
+      <div class="hero__bg-overlay"></div>
+    </div>
+
+    <!-- Floating Products -->
+    <div class="hero__floating-products">
+      <div class="hero__float-item"><img src="assets/images/iphone.png" alt=""></div>
+      <div class="hero__float-item"><img src="assets/images/smartwatch.png" alt=""></div>
+      <div class="hero__float-item"><img src="assets/images/airpods.png" alt=""></div>
+      <div class="hero__float-item"><img src="assets/images/ipad.png" alt=""></div>
+    </div>
+
+    <!-- BG Orbs -->
+    <div class="bg-orb bg-orb--pink" style="width:400px;height:400px;top:-100px;right:-100px;"></div>
+    <div class="bg-orb bg-orb--purple" style="width:300px;height:300px;bottom:10%;left:5%;"></div>
+    <div class="bg-orb bg-orb--blue" style="width:350px;height:350px;top:40%;right:20%;"></div>
+
+    <div class="container particles-container" data-particles="20">
+      <div class="hero__content">
+        <div class="hero__label hero-text-animate">
+          <span class="hero__label-dot"></span>
+          <span data-i18n="hero_label">+15 عاماً من التميز التقني</span>
+        </div>
+
+        <h1 class="hero__title hero-text-animate">
+          <span data-i18n="hero_title_1">حيث تبدأ التقنية</span><br>
+          <span class="gradient-text" data-i18n="hero_title_2">بثقة</span>
+        </h1>
+
+        <p class="hero__subtitle hero-text-animate" data-i18n="hero_subtitle">
+          آسيا ستور وجهتك المميزة لأحدث الأجهزة الذكية وحلول التكنولوجيا المتطورة في العراق.
+        </p>
+
+        <div class="hero__actions hero-text-animate">
+          <a href="pages/products.html" class="btn btn--primary btn--lg magnetic" data-i18n="hero_btn_shop">
+            استكشف المنتجات
+          </a>
+          <a href="pages/about.html" class="btn btn--outline btn--lg magnetic" data-i18n="hero_btn_about">
+            قصتنا
+          </a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="hero__stat reveal delay-1">
+            <div class="hero__stat-number" data-counter="15" data-counter-suffix="+">0</div>
+            <div class="hero__stat-label" data-i18n="stat_years">سنة خبرة</div>
+          </div>
+          <div class="hero__stat reveal delay-2">
+            <div class="hero__stat-number" data-counter="500" data-counter-suffix="+">0</div>
+            <div class="hero__stat-label" data-i18n="stat_products">منتج</div>
+          </div>
+          <div class="hero__stat reveal delay-3">
+            <div class="hero__stat-number" data-counter="10000" data-counter-suffix="+">0</div>
+            <div class="hero__stat-label" data-i18n="stat_customers">عميل سعيد</div>
+          </div>
+          <div class="hero__stat reveal delay-4">
+            <div class="hero__stat-number" data-counter="50" data-counter-suffix="+">0</div>
+            <div class="hero__stat-label" data-i18n="stat_brands">علامة تجارية</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- iPhone 17 Pro Max Showcase -->
+  <section class="section showcase-section" id="iphone17"
+    style="background: var(--surface-dark-elevated); border-top: 1px solid rgba(255,255,255,0.05); position: relative; overflow: hidden;">
+    <div class="bg-orb bg-orb--purple" style="width:500px;height:500px;top:20%;left:-200px;opacity:0.3;"></div>
+    <div class="bg-orb bg-orb--blue" style="width:400px;height:400px;bottom:10%;right:-100px;opacity:0.2;"></div>
+
+    <div class="container container--wide">
+      <div class="showcase-content"
+        style="display:flex; flex-direction:column; gap:var(--space-2xl); align-items:center;">
+
+        <div class="showcase-header reveal" style="text-align:center; max-width:800px;">
+          <h2 class="section-header__title gradient-text" data-i18n="iphone17_title"
+            style="font-size: clamp(2.5rem, 5vw, 4.5rem); letter-spacing: -0.02em; margin-bottom: var(--space-md);">
+            آيفون 17 برو ماكس (iPhone 17 Pro Max)</h2>
+          <p class="section-header__subtitle" data-i18n="iphone17_slogan"
+            style="font-size: var(--fs-xl); color: var(--color-gray-200); margin-bottom: var(--space-lg);">وجهتك الأولى
+            لأحدث التقنيات بضمان حقيقي وأمان تام في قلب بغداد</p>
+          <p style="color:var(--color-gray-400); font-size:var(--fs-md); line-height:1.6;" data-i18n="iphone17_desc">يعد
+            هاتف iPhone 17 Pro Max الإصدار الرائد والأقوى في سلسلة هواتف آبل، حيث يجمع بين التصميم المتطور من التيتانيوم
+            وأعلى تقنيات المعالجة والتصوير. تم تحسين الجهاز لتقديم أداء فائق في المهام المعقدة، الألعاب عالية الرسوميات،
+            والذكاء الاصطناعي التوليدي، مع شاشة هي الأكبر والأكثر سطوعاً في تاريخ هواتف آيفون.</p>
+        </div>
+
+        <div class="showcase-image reveal-scale delay-1"
+          style="position:relative; width:100%; max-width:600px; margin: 0 auto;">
+          <img src="assets/images/iphone.png" alt="iPhone 17 Pro Max"
+            style="width:100%; height:auto; object-fit:contain; filter:drop-shadow(0 30px 60px rgba(0,0,0,0.5));">
+        </div>
+
+        <div class="showcase-features grid"
+          style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:var(--space-xl); width:100%; margin-top:var(--space-xl);">
+
+          <div class="feature-card reveal delay-2 tilt-3d"
+            style="background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.05); padding:var(--space-xl); border-radius:var(--radius-lg);">
+            <div style="font-size:2.5rem; margin-bottom:var(--space-md);">🛡️</div>
+            <h3 style="font-size:var(--fs-lg); margin-bottom:var(--space-sm); color:var(--text-main);"
+              data-i18n="iphone17_f1_title">التصميم والهيكل</h3>
+            <p style="color:var(--color-gray-400); font-size:var(--fs-sm); line-height:1.6;"
+              data-i18n="iphone17_f1_desc">إطار مصنوع من التيتانيوم من الدرجة الخامسة مع واجهة درع السيراميك (Ceramic
+              Shield) الأحدث.</p>
+          </div>
+
+          <div class="feature-card reveal delay-3 tilt-3d"
+            style="background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.05); padding:var(--space-xl); border-radius:var(--radius-lg);">
+            <div style="font-size:2.5rem; margin-bottom:var(--space-md);">📱</div>
+            <h3 style="font-size:var(--fs-lg); margin-bottom:var(--space-sm); color:var(--text-main);"
+              data-i18n="iphone17_f2_title">الشاشة</h3>
+            <p style="color:var(--color-gray-400); font-size:var(--fs-sm); line-height:1.6;"
+              data-i18n="iphone17_f2_desc">شاشة Super Retina XDR مقاس 6.9 بوصة، تدعم تقنية Always-On وتقنية ProMotion
+              بمعدل تحديث تكيفي يصل إلى 120Hz.</p>
+          </div>
+
+          <div class="feature-card reveal delay-4 tilt-3d"
+            style="background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.05); padding:var(--space-xl); border-radius:var(--radius-lg);">
+            <div style="font-size:2.5rem; margin-bottom:var(--space-md);">⚙️</div>
+            <h3 style="font-size:var(--fs-lg); margin-bottom:var(--space-sm); color:var(--text-main);"
+              data-i18n="iphone17_f3_title">المعالج</h3>
+            <p style="color:var(--color-gray-400); font-size:var(--fs-sm); line-height:1.6;"
+              data-i18n="iphone17_f3_desc">رقاقة A19 Pro بتكنولوجيا تصنيع (3 نانومتر)، بوحدة معالجة مركزية سداسية النوى
+              ورسوميات تتبع الأشعة.</p>
+          </div>
+
+          <div class="feature-card reveal delay-1 tilt-3d"
+            style="background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.05); padding:var(--space-xl); border-radius:var(--radius-lg);">
+            <div style="font-size:2.5rem; margin-bottom:var(--space-md);">📸</div>
+            <h3 style="font-size:var(--fs-lg); margin-bottom:var(--space-sm); color:var(--text-main);"
+              data-i18n="iphone17_f4_title">نظام الكاميرات</h3>
+            <p style="color:var(--color-gray-400); font-size:var(--fs-sm); line-height:1.6;"
+              data-i18n="iphone17_f4_desc">رئيسية وواسعة 48MP وتليفتو بيريسكوب بتقريب بصري لمستويات غير مسبوقة.</p>
+          </div>
+
+          <div class="feature-card reveal delay-2 tilt-3d"
+            style="background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.05); padding:var(--space-xl); border-radius:var(--radius-lg);">
+            <div style="font-size:2.5rem; margin-bottom:var(--space-md);">💾</div>
+            <h3 style="font-size:var(--fs-lg); margin-bottom:var(--space-sm); color:var(--text-main);"
+              data-i18n="iphone17_f5_title">الذاكرة والتخزين</h3>
+            <p style="color:var(--color-gray-400); font-size:var(--fs-sm); line-height:1.6;"
+              data-i18n="iphone17_f5_desc">سعات 256GB حتى 1TB، مع زيادة بذاكرة الوصول العشوائي لدعم مهام Apple
+              Intelligence.</p>
+          </div>
+
+          <div class="feature-card reveal delay-3 tilt-3d"
+            style="background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.05); padding:var(--space-xl); border-radius:var(--radius-lg);">
+            <div style="font-size:2.5rem; margin-bottom:var(--space-md);">⚡</div>
+            <h3 style="font-size:var(--fs-lg); margin-bottom:var(--space-sm); color:var(--text-main);"
+              data-i18n="iphone17_f6_title">البطارية والاتصال</h3>
+            <p style="color:var(--color-gray-400); font-size:var(--fs-sm); line-height:1.6;"
+              data-i18n="iphone17_f6_desc">شحن سريع USB-C وMagSafe، مع دعم 5G وWi-Fi 7 والاتصال بالأقمار الصناعية.</p>
+          </div>
+
+        </div>
+
+        <div class="reveal delay-4" style="margin-top:var(--space-2xl); text-align:center;">
+          <div
+            style="background: linear-gradient(135deg, rgba(34,197,94,0.1), rgba(34,197,94,0.2)); border: 1px solid rgba(34,197,94,0.3); padding: var(--space-md) var(--space-xl); border-radius: var(--radius-full); display:inline-flex; align-items:center; gap:var(--space-md);">
+            <span style="font-size:1.5rem;">✅</span>
+            <span style="color: var(--color-green-400); font-weight:var(--fw-bold);"
+              data-i18n="iphone17_warranty">الضمان تشمل اي خلل مصنعي ويشمل اذا الجهاز طفى فجأة</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="section" id="categories">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__label" data-i18n="categories_label">الأقسام</span>
+        <h2 class="section-header__title" data-i18n="categories_title">تسوّق حسب الفئة</h2>
+        <p class="section-header__subtitle" data-i18n="categories_subtitle">اكتشف مجموعتنا المميزة من منتجات التكنولوجيا
+        </p>
+      </div>
+
+      <div class="categories-grid">
+        <div class="category-card reveal delay-1" onclick="window.location.href='pages/products.html'">
+          <img src="assets/images/iphone.png" alt="Smartphones" class="category-card__image"
+            style="object-fit:contain;background:linear-gradient(135deg,#1a1a2e,#16213e);">
+          <div class="category-card__overlay">
+            <h3 class="category-card__title" data-i18n="cat_smartphones">الهواتف الذكية</h3>
+            <p class="category-card__count" data-i18n="cat_smartphones_count">+50 منتج</p>
+          </div>
+        </div>
+        <div class="category-card reveal delay-2" onclick="window.location.href='pages/products.html'">
+          <img src="assets/images/macbook.png" alt="Laptops" class="category-card__image"
+            style="object-fit:contain;background:linear-gradient(135deg,#1a1a2e,#16213e);">
+          <div class="category-card__overlay">
+            <h3 class="category-card__title" data-i18n="cat_laptops">الحواسيب المحمولة</h3>
+            <p class="category-card__count" data-i18n="cat_laptops_count">+30 منتج</p>
+          </div>
+        </div>
+        <div class="category-card reveal delay-3" onclick="window.location.href='pages/products.html'">
+          <img src="assets/images/smartwatch.png" alt="Wearables" class="category-card__image"
+            style="object-fit:contain;background:linear-gradient(135deg,#1a1a2e,#16213e);">
+          <div class="category-card__overlay">
+            <h3 class="category-card__title" data-i18n="cat_wearables">الأجهزة القابلة للارتداء</h3>
+            <p class="category-card__count" data-i18n="cat_wearables_count">+25 منتج</p>
+          </div>
+        </div>
+        <div class="category-card reveal delay-1" onclick="window.location.href='pages/products.html'">
+          <img src="assets/images/airpods.png" alt="Audio" class="category-card__image"
+            style="object-fit:contain;background:linear-gradient(135deg,#1a1a2e,#16213e);">
+          <div class="category-card__overlay">
+            <h3 class="category-card__title" data-i18n="cat_audio">الصوتيات</h3>
+            <p class="category-card__count" data-i18n="cat_audio_count">+35 منتج</p>
+          </div>
+        </div>
+        <div class="category-card reveal delay-2" onclick="window.location.href='pages/products.html'">
+          <img src="assets/images/smart-home.png" alt="Smart Home" class="category-card__image">
+          <div class="category-card__overlay">
+            <h3 class="category-card__title" data-i18n="cat_smarthome">المنزل الذكي</h3>
+            <p class="category-card__count" data-i18n="cat_smarthome_count">+40 منتج</p>
+          </div>
+        </div>
+        <div class="category-card reveal delay-3" onclick="window.location.href='pages/products.html'">
+          <img src="assets/images/ipad.png" alt="Accessories" class="category-card__image"
+            style="object-fit:contain;background:linear-gradient(135deg,#1a1a2e,#16213e);">
+          <div class="category-card__overlay">
+            <h3 class="category-card__title" data-i18n="cat_accessories">الإكسسوارات</h3>
+            <p class="category-card__count" data-i18n="cat_accessories_count">+100 منتج</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="section" id="products" style="background: var(--surface-dark-elevated);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__label" data-i18n="products_label">منتجات مميزة</span>
+        <h2 class="section-header__title" data-i18n="products_title">الأكثر مبيعاً</h2>
+        <p class="section-header__subtitle" data-i18n="products_subtitle">تشكيلة مختارة من أفضل المنتجات التقنية</p>
+      </div>
+
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card reveal delay-1" data-category="smartphones">
+          <span class="product-card__badge" data-i18n="product_new">جديد</span>
+          <div class="product-card__image">
+            <img src="assets/images/iphone.png" alt="iPhone 16 Pro Max">
+          </div>
+          <div class="product-card__info">
+            <p class="product-card__category" data-i18n="p1_category">الهواتف الذكية</p>
+            <h3 class="product-card__title" data-i18n="p1_title">iPhone 16 Pro Max</h3>
+            <p class="product-card__desc" data-i18n="p1_desc">الآيفون الأقوى مع شريحة A18 Pro ونظام كاميرا 48 ميجابكسل
+            </p>
+            <div class="product-card__actions">
+              <span class="product-card__price" data-i18n="p1_price">1,399,000 د.ع</span>
+              <button class="btn btn--sm btn--glass" data-i18n="add_to_cart">أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card reveal delay-2" data-category="smartphones">
+          <span class="product-card__badge" data-i18n="product_hot">رائج</span>
+          <div class="product-card__image">
+            <img src="assets/images/samsung.png" alt="Samsung Galaxy S24 Ultra">
+          </div>
+          <div class="product-card__info">
+            <p class="product-card__category" data-i18n="p2_category">الهواتف الذكية</p>
+            <h3 class="product-card__title" data-i18n="p2_title">Samsung Galaxy S24 Ultra</h3>
+            <p class="product-card__desc" data-i18n="p2_desc">الهاتف الرائد بتقنية Galaxy AI مع قلم S Pen</p>
+            <div class="product-card__actions">
+              <span class="product-card__price" data-i18n="p2_price">1,499,000 د.ع</span>
+              <button class="btn btn--sm btn--glass" data-i18n="add_to_cart">أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card reveal delay-3" data-category="audio">
+          <div class="product-card__image">
+            <img src="assets/images/airpods.png" alt="AirPods Pro 2">
+          </div>
+          <div class="product-card__info">
+            <p class="product-card__category" data-i18n="p3_category">الصوتيات</p>
+            <h3 class="product-card__title" data-i18n="p3_title">AirPods Pro 2</h3>
+            <p class="product-card__desc" data-i18n="p3_desc">إلغاء ضوضاء نشط، صوت تكيّفي</p>
+            <div class="product-card__actions">
+              <span class="product-card__price" data-i18n="p3_price">299,000 د.ع</span>
+              <button class="btn btn--sm btn--glass" data-i18n="add_to_cart">أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card reveal delay-1" data-category="wearables">
+          <span class="product-card__badge" data-i18n="product_new">جديد</span>
+          <div class="product-card__image">
+            <img src="assets/images/smartwatch.png" alt="Apple Watch Ultra 2">
+          </div>
+          <div class="product-card__info">
+            <p class="product-card__category" data-i18n="p4_category">الأجهزة القابلة للارتداء</p>
+            <h3 class="product-card__title" data-i18n="p4_title">Apple Watch Ultra 2</h3>
+            <p class="product-card__desc" data-i18n="p4_desc">ساعة Apple الأقوى مع GPS دقيق</p>
+            <div class="product-card__actions">
+              <span class="product-card__price" data-i18n="p4_price">949,000 د.ع</span>
+              <button class="btn btn--sm btn--glass" data-i18n="add_to_cart">أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card reveal delay-2" data-category="laptops">
+          <div class="product-card__image">
+            <img src="assets/images/macbook.png" alt="MacBook Pro M3">
+          </div>
+          <div class="product-card__info">
+            <p class="product-card__category" data-i18n="p5_category">الحواسيب المحمولة</p>
+            <h3 class="product-card__title" data-i18n="p5_title">MacBook Pro M3</h3>
+            <p class="product-card__desc" data-i18n="p5_desc">مدعوم بشرائح M3 Pro و M3 Max</p>
+            <div class="product-card__actions">
+              <span class="product-card__price" data-i18n="p5_price">2,399,000 د.ع</span>
+              <button class="btn btn--sm btn--glass" data-i18n="add_to_cart">أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card reveal delay-3" data-category="tablets">
+          <span class="product-card__badge" data-i18n="product_sale">تخفيض</span>
+          <div class="product-card__image">
+            <img src="assets/images/ipad.png" alt="iPad Pro M4">
+          </div>
+          <div class="product-card__info">
+            <p class="product-card__category" data-i18n="p6_category">الأجهزة اللوحية</p>
+            <h3 class="product-card__title" data-i18n="p6_title">iPad Pro M4</h3>
+            <p class="product-card__desc" data-i18n="p6_desc">أنحف منتج من Apple على الإطلاق</p>
+            <div class="product-card__actions">
+              <span class="product-card__price" data-i18n="p6_price">1,299,000 د.ع</span>
+              <button class="btn btn--sm btn--glass" data-i18n="add_to_cart">أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product-card reveal delay-1" data-category="smarthome">
+          <span class="product-card__badge" data-i18n="product_new">جديد</span>
+          <div class="product-card__image">
+            <img src="assets/images/IMG_1547.PNG" alt="Smart Robot Vacuum">
+          </div>
+          <div class="product-card__info">
+            <p class="product-card__category" data-i18n="p7_category">المنزل الذكي</p>
+            <h3 class="product-card__title" data-i18n="p7_title">مكنسة روبوت ذكية</h3>
+            <p class="product-card__desc" data-i18n="p7_desc">مكنسة ذكية برسم خرائط تلقائي ومحطة تنظيف ذاتية.</p>
+            <div class="product-card__actions">
+              <span class="product-card__price" data-i18n="p7_price">450,000 د.ع</span>
+              <button class="btn btn--sm btn--glass" data-i18n="add_to_cart">أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="product-card reveal delay-2" data-category="electronics">
+          <span class="product-card__badge" data-i18n="product_hot">رائج</span>
+          <div class="product-card__image">
+            <img src="assets/images/IMG_2055.JPG.jpeg" alt="Smart Coffee Maker">
+          </div>
+          <div class="product-card__info">
+            <p class="product-card__category" data-i18n="p9_category">الإلكترونيات</p>
+            <h3 class="product-card__title" data-i18n="p9_title">صانعة قهوة ذكية</h3>
+            <p class="product-card__desc" data-i18n="p9_desc">ماكينة اسبريسو تدعم Wi-Fi، خصص قهوتك الصباحية.</p>
+            <div class="product-card__actions">
+              <span class="product-card__price" data-i18n="p9_price">350,000 د.ع</span>
+              <button class="btn btn--sm btn--glass" data-i18n="add_to_cart">أضف للسلة</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:var(--space-3xl);">
+        <a href="pages/products.html" class="btn btn--primary btn--lg magnetic reveal" data-i18n="view_all">عرض جميع
+          المنتجات</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-header__label" data-i18n="features_label">لماذا آسيا ستور</span>
+        <h2 class="section-header__title" data-i18n="features_title">لماذا تختارنا؟</h2>
+        <p class="section-header__subtitle" data-i18n="features_subtitle">اختيارك لآسيا ستور يعني أنك اخترت راحة البال
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card reveal delay-1 tilt-3d">
+          <div class="feature-card__icon">🛡️</div>
+          <h3 class="feature-card__title" data-i18n="f1_title">ضمان حقيقي</h3>
+          <p class="feature-card__desc" data-i18n="f1_desc">ضمانات حقيقية تشمل العيوب المصنعية والأداء المستقر</p>
+        </div>
+
+        <div class="feature-card reveal delay-2 tilt-3d">
+          <div class="feature-card__icon">🏢</div>
+          <h3 class="feature-card__title" data-i18n="f2_title">متابعة كاملة مع الوكالات</h3>
+          <p class="feature-card__desc" data-i18n="f2_desc">نحن نتولى مراجعة الوكالات الرسمية ومتابعة الصيانة</p>
+        </div>
+
+        <div class="feature-card reveal delay-3 tilt-3d">
+          <div class="feature-card__icon">🎧</div>
+          <h3 class="feature-card__title" data-i18n="f3_title">خدمات ما بعد البيع</h3>
+          <p class="feature-card__desc" data-i18n="f3_desc">فريق متخصص يقدم استشارات تقنية ودعم فني مستمر</p>
+        </div>
+
+        <div class="feature-card reveal delay-4 tilt-3d">
+          <div class="feature-card__icon">✅</div>
+          <h3 class="feature-card__title" data-i18n="f4_title">منتجات أصلية 100%</h3>
+          <p class="feature-card__desc" data-i18n="f4_desc">نتعامل مباشرة مع الوكلاء الرسميين لضمان وصول المنتج الأصلي
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Arcade Games Banner -->
+  <section class="section" id="arcade" style="background: var(--surface-dark-elevated); overflow: hidden;">
+    <div class="container">
+      <div class="reveal-scale"
+        style="position:relative;padding:var(--space-3xl) var(--space-2xl);border-radius:var(--radius-xl);background:linear-gradient(135deg, rgba(99,102,241,0.12), rgba(192,132,252,0.08), rgba(244,114,182,0.08));border:1px solid rgba(192,132,252,0.15);text-align:center;overflow:hidden;">
+        <div
+          style="position:absolute;top:-50px;right:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(192,132,252,0.15),transparent);border-radius:50%;">
+        </div>
+        <div
+          style="position:absolute;bottom:-40px;left:-40px;width:160px;height:160px;background:radial-gradient(circle,rgba(99,102,241,0.12),transparent);border-radius:50%;">
+        </div>
+        <div style="position:relative;z-index:2;">
+          <div
+            style="font-size:3.5rem;margin-bottom:var(--space-md);filter:drop-shadow(0 0 20px rgba(192,132,252,0.4));">
+            🕹️</div>
+          <h2 style="font-size:var(--fs-3xl);font-weight:var(--fw-black);margin-bottom:var(--space-sm);"
+            data-i18n="games_hero_title">العب واستمتع</h2>
+          <p style="color:var(--color-gray-300);font-size:var(--fs-md);margin-bottom:var(--space-xl);max-width:500px;margin-left:auto;margin-right:auto;"
+            data-i18n="games_hero_subtitle">خذ استراحة واستمتع بهذه الألعاب الكلاسيكية أثناء تصفح متجرنا.</p>
+          <div
+            style="display:flex;gap:var(--space-lg);justify-content:center;flex-wrap:wrap;margin-bottom:var(--space-xl);">
+            <span style="font-size:2rem;animation:floatingElement 2s ease-in-out infinite;">🍄</span>
+            <span style="font-size:2rem;animation:floatingElement 2.3s ease-in-out infinite 0.2s;">🧩</span>
+            <span style="font-size:2rem;animation:floatingElement 2.6s ease-in-out infinite 0.4s;">👻</span>
+            <span style="font-size:2rem;animation:floatingElement 2.1s ease-in-out infinite 0.6s;">🐍</span>
+            <span style="font-size:2rem;animation:floatingElement 2.4s ease-in-out infinite 0.8s;">🐦</span>
+            <span style="font-size:2rem;animation:floatingElement 2.2s ease-in-out infinite 1s;">🧱</span>
+            <span style="font-size:2rem;animation:floatingElement 2.5s ease-in-out infinite 1.2s;">🔢</span>
+          </div>
+          <a href="pages/games.html" class="btn btn--primary btn--lg magnetic" style="font-size:var(--fs-md);">
+            🎮 <span data-i18n="games_play">العب الآن</span> — 7 ألعاب كلاسيكية
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Newsletter -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-box reveal-scale gradient-shift">
+        <div class="cta-box__decor cta-box__decor--1"></div>
+        <div class="cta-box__decor cta-box__decor--2"></div>
+        <h2 class="cta-box__title" data-i18n="cta_title">ابقَ على اطلاع بأحدث التقنيات</h2>
+        <p class="cta-box__subtitle" data-i18n="cta_subtitle">اشترك لتصلك العروض الحصرية وأخبار المنتجات الجديدة.</p>
+        <form class="cta-box__form" onsubmit="event.preventDefault();">
+          <input type="email" class="cta-box__input" data-i18n-placeholder="cta_placeholder"
+            placeholder="أدخل بريدك الإلكتروني">
+          <button type="submit" class="cta-box__btn" data-i18n="cta_btn">اشترك</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/logo.svg" alt="Asia Store">
+          <p data-i18n="footer_desc">وجهتك المميزة لأحدث الأجهزة الذكية وحلول التكنولوجيا المبتكرة منذ 2011.</p>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/asia.store.iq" target="_blank" aria-label="Instagram">📷</a>
+            <a href="https://www.facebook.com/share/1KiaEUe9XV" target="_blank" aria-label="Facebook">📘</a>
+            <a href="https://www.tiktok.com/@asia.store24" target="_blank" aria-label="TikTok">🎵</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer__title" data-i18n="footer_quick">روابط سريعة</h4>
+          <ul class="footer__links">
+            <li><a href="index.html" data-i18n="nav_home">الرئيسية</a></li>
+            <li><a href="pages/products.html" data-i18n="nav_products">المنتجات</a></li>
+            <li><a href="pages/about.html" data-i18n="nav_about">من نحن</a></li>
+            <li><a href="pages/contact.html" data-i18n="nav_contact">تواصل معنا</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__title" data-i18n="footer_support">الدعم</h4>
+          <ul class="footer__links">
+            <li><a href="pages/warranty.html" data-i18n="footer_warranty">سياسة الضمان</a></li>
+            <li><a href="pages/returns.html" data-i18n="footer_returns">الاسترجاع</a></li>
+            <li><a href="pages/faq.html" data-i18n="footer_faq">الأسئلة الشائعة</a></li>
+            <li><a href="pages/privacy.html" data-i18n="footer_privacy">سياسة الخصوصية</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__title" data-i18n="footer_contact">معلومات التواصل</h4>
+          <ul class="footer__links">
+            <li>📍 بغداد – السبع أبكار</li>
+            <li>📞 07746400400</li>
+            <li>📞 07747400400</li>
+            <li>🕒 10:00 ص – 10:00 م</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p data-i18n="footer_rights">© 2024 آسيا ستور. جميع الحقوق محفوظة.</p>
+        <p data-i18n="footer_tagline">حيث تبدأ التقنية بثقة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+
+</html>

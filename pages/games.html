@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description"
+        content="آسيا ستور - منطقة الألعاب. استمتع بالألعاب الكلاسيكية: سوبر ماريو، تتريس، باك مان والمزيد">
+    <title>الألعاب | آسيا ستور - Asia Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Outfit:wght@300;400;500;600;700;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/support-pages.css">
+    <style>
+        .games-hero {
+            position: relative;
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: calc(var(--space-4xl) + 80px) var(--space-lg) var(--space-2xl);
+            overflow: hidden;
+            background: var(--surface-dark);
+        }
+
+        .games-hero__icon {
+            font-size: 4rem;
+            margin-bottom: var(--space-md);
+            display: block;
+            filter: drop-shadow(0 0 30px rgba(192, 132, 252, 0.5));
+            animation: floatingElement 3s ease-in-out infinite;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--space-xl);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .game-card {
+            position: relative;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.03);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .game-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            border-color: rgba(192, 132, 252, 0.4);
+            box-shadow: 0 20px 50px rgba(192, 132, 252, 0.12);
+        }
+
+        .game-card__image-wrap {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .game-card__image {
+            width: 100%;
+            aspect-ratio: 16/10;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .game-card:hover .game-card__image {
+            transform: scale(1.06);
+        }
+
+        .game-card__badge {
+            position: absolute;
+            top: 10px;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+
+        [dir="rtl"] .game-card__badge {
+            left: 10px;
+        }
+
+        [dir="ltr"] .game-card__badge {
+            right: 10px;
+        }
+
+        .game-card__badge--mario {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: #fff;
+        }
+
+        .game-card__badge--tetris {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: #fff;
+        }
+
+        .game-card__badge--pacman {
+            background: linear-gradient(135deg, #f1c40f, #e67e22);
+            color: #333;
+        }
+
+        .game-card__badge--snake {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: #fff;
+        }
+
+        .game-card__badge--2048 {
+            background: linear-gradient(135deg, #a855f7, #7c3aed);
+            color: #fff;
+        }
+
+        .game-card__badge--flappy {
+            background: linear-gradient(135deg, #06b6d4, #0891b2);
+            color: #fff;
+        }
+
+        .game-card__badge--breakout {
+            background: linear-gradient(135deg, #f472b6, #db2777);
+            color: #fff;
+        }
+
+        .game-card__info {
+            padding: var(--space-lg);
+        }
+
+        .game-card__title {
+            font-size: var(--fs-xl);
+            font-weight: var(--fw-black);
+            margin-bottom: 4px;
+            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .game-card__desc {
+            font-size: var(--fs-xs);
+            color: var(--color-gray-400);
+            line-height: var(--lh-relaxed);
+            margin-bottom: var(--space-md);
+        }
+
+        .game-card__play-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 20px;
+            border-radius: 30px;
+            background: var(--gradient-primary);
+            color: #fff;
+            font-size: var(--fs-xs);
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-family: inherit;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .game-card__play-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(192, 132, 252, 0.3);
+        }
+
+        .game-card__play-btn span {
+            font-size: 1rem;
+        }
+
+        .game-card__tags {
+            margin-top: 8px;
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+
+        .game-card__tag {
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.65rem;
+            color: var(--color-gray-500);
+        }
+
+        /* Game Modal */
+        .game-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            background: rgba(0, 0, 0, 0.96);
+            backdrop-filter: blur(20px);
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 8px;
+            overflow-y: auto;
+        }
+
+        .game-modal.active {
+            display: flex;
+        }
+
+        .game-modal__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 900px;
+            padding: 8px 0;
+            flex-shrink: 0;
+        }
+
+        .game-modal__title {
+            font-size: var(--fs-lg);
+            font-weight: 700;
+            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .game-modal__close {
+            padding: 6px 16px;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #fff;
+            cursor: pointer;
+            font-size: var(--fs-xs);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-family: inherit;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .game-modal__close:hover {
+            background: rgba(239, 68, 68, 0.2);
+            border-color: rgba(239, 68, 68, 0.4);
+        }
+
+        .game-modal__frame-wrap {
+            width: 100%;
+            max-width: 900px;
+            flex: 1;
+            min-height: 300px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid rgba(192, 132, 252, 0.25);
+            box-shadow: 0 0 40px rgba(192, 132, 252, 0.1);
+            background: #000;
+        }
+
+        .game-modal__frame-wrap iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* Virtual Gamepad */
+        .vgamepad {
+            display: none;
+            width: 100%;
+            max-width: 400px;
+            padding: 8px 0;
+            flex-shrink: 0;
+        }
+
+        .vgamepad.show {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .vgamepad__dpad {
+            display: grid;
+            grid-template-columns: repeat(3, 52px);
+            grid-template-rows: repeat(3, 52px);
+            gap: 3px;
+        }
+
+        .vgamepad__btn {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            border: 2px solid rgba(192, 132, 252, 0.25);
+            background: rgba(192, 132, 252, 0.08);
+            color: #c084fc;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            transition: background 0.1s;
+            user-select: none;
+        }
+
+        .vgamepad__btn:active,
+        .vgamepad__btn.pressed {
+            background: rgba(192, 132, 252, 0.35);
+            border-color: rgba(192, 132, 252, 0.5);
+        }
+
+        .vgamepad__btn--empty {
+            background: transparent;
+            border: none;
+        }
+
+        .vgamepad__actions {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .vgamepad__action {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid rgba(192, 132, 252, 0.3);
+            background: rgba(192, 132, 252, 0.1);
+            color: #c084fc;
+            font-size: 13px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .vgamepad__action:active {
+            background: rgba(192, 132, 252, 0.35);
+        }
+
+        @media(max-width:640px) {
+            .games-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-md);
+            }
+
+            .game-card__info {
+                padding: var(--space-md);
+            }
+
+            .game-card__title {
+                font-size: var(--fs-md);
+            }
+
+            .game-card__desc {
+                font-size: 0.7rem;
+                margin-bottom: 8px;
+            }
+
+            .game-modal__frame-wrap {
+                min-height: 250px;
+                max-height: 55vh;
+            }
+
+            .vgamepad__dpad {
+                grid-template-columns: repeat(3, 44px);
+                grid-template-rows: repeat(3, 44px);
+            }
+
+            .vgamepad__btn {
+                width: 44px;
+                height: 44px;
+                font-size: 16px;
+            }
+
+            .vgamepad__action {
+                width: 50px;
+                height: 50px;
+                font-size: 12px;
+            }
+        }
+
+        @media(max-width:380px) {
+            .games-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-transition">
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container container--wide">
+            <a href="../index.html" class="header__logo"><img src="../assets/logo.svg" alt="Asia Store Logo"><span
+                    class="header__logo-text">Asia Store</span></a>
+            <nav class="header__nav" id="mainNav">
+                <ul class="header__nav-list">
+                    <li><a href="../index.html" class="header__nav-link" data-i18n="nav_home">الرئيسية</a></li>
+                    <li><a href="products.html" class="header__nav-link" data-i18n="nav_products">المنتجات</a></li>
+                    <li><a href="about.html" class="header__nav-link" data-i18n="nav_about">من نحن</a></li>
+                    <li><a href="contact.html" class="header__nav-link" data-i18n="nav_contact">تواصل معنا</a></li>
+                </ul>
+                <div class="lang-switcher"><button class="lang-btn active" data-lang="ar">عربي</button><button
+                        class="lang-btn" data-lang="en">EN</button></div>
+            </nav>
+            <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="games-hero noise-overlay">
+        <div class="bg-orb bg-orb--pink" style="width:300px;height:300px;top:-80px;right:-80px;"></div>
+        <div class="bg-orb bg-orb--blue" style="width:250px;height:250px;bottom:-50px;left:-50px;"></div>
+        <div class="container" style="position:relative;z-index:2;">
+            <div class="games-hero__icon hero-text-animate">🕹️</div>
+            <span class="section-header__label hero-text-animate" data-i18n="games_hero_label">منطقة الألعاب</span>
+            <h1 class="section-header__title hero-text-animate" style="font-size:var(--fs-hero);"
+                data-i18n="games_hero_title">العب واستمتع</h1>
+            <p class="section-header__subtitle hero-text-animate" data-i18n="games_hero_subtitle">خذ استراحة واستمتع
+                بهذه الألعاب الكلاسيكية أثناء تصفح متجرنا.</p>
+        </div>
+    </section>
+
+    <!-- Games Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="games-grid">
+
+                <!-- Super Mario -->
+                <div class="game-card reveal delay-1" onclick="openGame('mario','Super Mario','dpad')">
+                    <div class="game-card__image-wrap">
+                        <span class="game-card__badge game-card__badge--mario">🍄 Classic</span>
+                        <img src="../assets/images/mario-thumb.png" alt="Super Mario" class="game-card__image">
+                    </div>
+                    <div class="game-card__info">
+                        <h3 class="game-card__title" data-i18n="games_mario">سوبر ماريو</h3>
+                        <p class="game-card__desc" data-i18n="games_mario_desc">اقفز، اركض، واجمع العملات في هذه
+                            المغامرة الكلاسيكية!</p>
+                        <button class="game-card__play-btn"><span>▶</span> <span data-i18n="games_play">العب
+                                الآن</span></button>
+                        <div class="game-card__tags"><span class="game-card__tag">⌨️ Arrows + X/Z</span><span
+                                class="game-card__tag">📱 Touch</span></div>
+                    </div>
+                </div>
+
+                <!-- Tetris -->
+                <div class="game-card reveal delay-2" onclick="openGame('tetris','Tetris','dpad')">
+                    <div class="game-card__image-wrap">
+                        <span class="game-card__badge game-card__badge--tetris">🧩 Puzzle</span>
+                        <img src="../assets/images/tetris-thumb.png" alt="Tetris" class="game-card__image">
+                    </div>
+                    <div class="game-card__info">
+                        <h3 class="game-card__title" data-i18n="games_tetris">تتريس</h3>
+                        <p class="game-card__desc" data-i18n="games_tetris_desc">لعبة الألغاز الكلاسيكية لتكديس
+                            المكعبات!</p>
+                        <button class="game-card__play-btn"><span>▶</span> <span data-i18n="games_play">العب
+                                الآن</span></button>
+                        <div class="game-card__tags"><span class="game-card__tag">⌨️ Arrows + Space</span><span
+                                class="game-card__tag">📱 Touch</span></div>
+                    </div>
+                </div>
+
+                <!-- Pac-Man -->
+                <div class="game-card reveal delay-3" onclick="openGame('pacman','Pac-Man','dpad')">
+                    <div class="game-card__image-wrap">
+                        <span class="game-card__badge game-card__badge--pacman">👻 Arcade</span>
+                        <img src="../assets/images/pacman-thumb.png" alt="Pac-Man" class="game-card__image">
+                    </div>
+                    <div class="game-card__info">
+                        <h3 class="game-card__title" data-i18n="games_pacman">باك مان</h3>
+                        <p class="game-card__desc" data-i18n="games_pacman_desc">تنقل في المتاهة وتجنب الأشباح!</p>
+                        <button class="game-card__play-btn"><span>▶</span> <span data-i18n="games_play">العب
+                                الآن</span></button>
+                        <div class="game-card__tags"><span class="game-card__tag">⌨️ Arrows</span><span
+                                class="game-card__tag">📱 Touch</span></div>
+                    </div>
+                </div>
+
+                <!-- Snake -->
+                <div class="game-card reveal delay-1" onclick="openGame('snake','Snake','none')">
+                    <div class="game-card__image-wrap">
+                        <span class="game-card__badge game-card__badge--snake">🐍 Retro</span>
+                        <img src="../assets/images/snake-thumb.png" alt="Snake" class="game-card__image">
+                    </div>
+                    <div class="game-card__info">
+                        <h3 class="game-card__title">Snake</h3>
+                        <p class="game-card__desc">لعبة الأفعى الكلاسيكية! كل الطعام وتجنب الاصطدام</p>
+                        <button class="game-card__play-btn"><span>▶</span> <span data-i18n="games_play">العب
+                                الآن</span></button>
+                        <div class="game-card__tags"><span class="game-card__tag">⌨️ Arrows</span><span
+                                class="game-card__tag">📱 Swipe</span></div>
+                    </div>
+                </div>
+
+                <!-- 2048 -->
+                <div class="game-card reveal delay-2" onclick="openGame('game2048','2048','none')">
+                    <div class="game-card__image-wrap">
+                        <span class="game-card__badge game-card__badge--2048">🔢 Puzzle</span>
+                        <img src="../assets/images/2048-thumb.png" alt="2048" class="game-card__image">
+                    </div>
+                    <div class="game-card__info">
+                        <h3 class="game-card__title">2048</h3>
+                        <p class="game-card__desc">ادمج الأرقام واوصل إلى 2048! لعبة ألغاز إدمانية</p>
+                        <button class="game-card__play-btn"><span>▶</span> <span data-i18n="games_play">العب
+                                الآن</span></button>
+                        <div class="game-card__tags"><span class="game-card__tag">⌨️ Arrows</span><span
+                                class="game-card__tag">📱 Swipe</span></div>
+                    </div>
+                </div>
+
+                <!-- Flappy Bird -->
+                <div class="game-card reveal delay-3" onclick="openGame('flappy','Flappy Bird','none')">
+                    <div class="game-card__image-wrap">
+                        <span class="game-card__badge game-card__badge--flappy">🐦 Arcade</span>
+                        <img src="../assets/images/flappy-thumb.png" alt="Flappy Bird" class="game-card__image">
+                    </div>
+                    <div class="game-card__info">
+                        <h3 class="game-card__title">Flappy Bird</h3>
+                        <p class="game-card__desc">طير بين الأنابيب! لعبة بسيطة لكنها تحتاج مهارة</p>
+                        <button class="game-card__play-btn"><span>▶</span> <span data-i18n="games_play">العب
+                                الآن</span></button>
+                        <div class="game-card__tags"><span class="game-card__tag">⌨️ Space</span><span
+                                class="game-card__tag">📱 Tap</span></div>
+                    </div>
+                </div>
+
+                <!-- Breakout -->
+                <div class="game-card reveal delay-1" onclick="openGame('breakout','Breakout','none')">
+                    <div class="game-card__image-wrap">
+                        <span class="game-card__badge game-card__badge--breakout">🧱 Arcade</span>
+                        <img src="../assets/images/breakout-thumb.png" alt="Breakout" class="game-card__image">
+                    </div>
+                    <div class="game-card__info">
+                        <h3 class="game-card__title">Breakout</h3>
+                        <p class="game-card__desc">حطّم الطوب بالكرة وحقق أعلى نتيجة!</p>
+                        <button class="game-card__play-btn"><span>▶</span> <span data-i18n="games_play">العب
+                                الآن</span></button>
+                        <div class="game-card__tags"><span class="game-card__tag">⌨️ Arrows</span><span
+                                class="game-card__tag">📱 Drag</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Modal -->
+    <div class="game-modal" id="gameModal">
+        <div class="game-modal__header">
+            <h2 class="game-modal__title" id="gameModalTitle">Game</h2>
+            <button class="game-modal__close" onclick="closeGame()">✕ <span
+                    data-i18n="games_back">العودة</span></button>
+        </div>
+        <div class="game-modal__frame-wrap" id="frameWrap">
+            <iframe id="gameFrame" src="" allow="autoplay"></iframe>
+        </div>
+        <!-- Virtual Gamepad for mobile -->
+        <div class="vgamepad" id="vgamepad">
+            <div class="vgamepad__dpad">
+                <div class="vgamepad__btn vgamepad__btn--empty"></div>
+                <div class="vgamepad__btn" data-key="ArrowUp">▲</div>
+                <div class="vgamepad__btn vgamepad__btn--empty"></div>
+                <div class="vgamepad__btn" data-key="ArrowLeft">◀</div>
+                <div class="vgamepad__btn vgamepad__btn--empty"></div>
+                <div class="vgamepad__btn" data-key="ArrowRight">▶</div>
+                <div class="vgamepad__btn vgamepad__btn--empty"></div>
+                <div class="vgamepad__btn" data-key="ArrowDown">▼</div>
+                <div class="vgamepad__btn vgamepad__btn--empty"></div>
+            </div>
+            <div class="vgamepad__actions">
+                <div class="vgamepad__action" data-key=" " id="btnA">A</div>
+                <div class="vgamepad__action" data-key="x" id="btnB">B</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand"><img src="../assets/logo.svg" alt="Asia Store">
+                    <p data-i18n="footer_desc">وجهتك المميزة لأحدث الأجهزة الذكية منذ 2011.</p>
+                    <div class="footer__social"><a href="https://www.instagram.com/asia.store.iq"
+                            target="_blank">📷</a><a href="https://www.facebook.com/share/1KiaEUe9XV"
+                            target="_blank">📘</a><a href="https://www.tiktok.com/@asia.store24" target="_blank">🎵</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer__title" data-i18n="footer_quick">روابط سريعة</h4>
+                    <ul class="footer__links">
+                        <li><a href="../index.html" data-i18n="nav_home">الرئيسية</a></li>
+                        <li><a href="products.html" data-i18n="nav_products">المنتجات</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">من نحن</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__title" data-i18n="footer_support">الدعم</h4>
+                    <ul class="footer__links">
+                        <li><a href="warranty.html" data-i18n="footer_warranty">سياسة الضمان</a></li>
+                        <li><a href="returns.html" data-i18n="footer_returns">الاسترجاع</a></li>
+                        <li><a href="faq.html" data-i18n="footer_faq">الأسئلة الشائعة</a></li>
+                        <li><a href="privacy.html" data-i18n="footer_privacy">سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__title" data-i18n="footer_contact">معلومات التواصل</h4>
+                    <ul class="footer__links">
+                        <li>📍 بغداد – السبع أبكار</li>
+                        <li>📞 07746400400</li>
+                        <li>📞 07747400400</li>
+                        <li>🕒 10:00 ص – 10:00 م</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p data-i18n="footer_rights">© 2024 آسيا ستور. جميع الحقوق محفوظة.</p>
+                <p data-i18n="footer_tagline">حيث تبدأ التقنية بثقة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/cart.js"></script>
+    <script>
+        const gamePaths = {
+            mario: '../games/mario-repo/index.html',
+            tetris: '../games/tetris/index.html',
+            pacman: '../games/pacman/index.htm',
+            snake: '../games/snake/index.html',
+            game2048: '../games/game2048/index.html',
+            flappy: '../games/flappy/index.html',
+            breakout: '../games/breakout/index.html'
+        };
+
+        let currentGamepad = 'none';
+
+        function openGame(gameId, title, padType) {
+            const modal = document.getElementById('gameModal');
+            const frame = document.getElementById('gameFrame');
+            const titleEl = document.getElementById('gameModalTitle');
+            const vgamepad = document.getElementById('vgamepad');
+
+            titleEl.textContent = title;
+            frame.src = gamePaths[gameId];
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            currentGamepad = padType;
+
+            // Show virtual gamepad on touch devices for iframe games
+            const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+            if (isTouch && padType === 'dpad') {
+                vgamepad.classList.add('show');
+            } else {
+                vgamepad.classList.remove('show');
+            }
+
+            setTimeout(() => frame.focus(), 500);
+        }
+
+        function closeGame() {
+            const modal = document.getElementById('gameModal');
+            const frame = document.getElementById('gameFrame');
+            const vgamepad = document.getElementById('vgamepad');
+            modal.classList.remove('active');
+            frame.src = '';
+            document.body.style.overflow = '';
+            vgamepad.classList.remove('show');
+        }
+
+        // Virtual Gamepad: Send keyboard events to iframe
+        function sendKeyToIframe(key, type) {
+            const frame = document.getElementById('gameFrame');
+            try {
+                const doc = frame.contentDocument || frame.contentWindow.document;
+                const event = new KeyboardEvent(type, {
+                    key: key, code: 'Key' + key.toUpperCase(),
+                    keyCode: key === 'ArrowUp' ? 38 : key === 'ArrowDown' ? 40 : key === 'ArrowLeft' ? 37 : key === 'ArrowRight' ? 39 : key === ' ' ? 32 : key === 'x' ? 88 : key === 'z' ? 90 : 0,
+                    which: key === 'ArrowUp' ? 38 : key === 'ArrowDown' ? 40 : key === 'ArrowLeft' ? 37 : key === 'ArrowRight' ? 39 : key === ' ' ? 32 : key === 'x' ? 88 : key === 'z' ? 90 : 0,
+                    bubbles: true, cancelable: true
+                });
+                doc.dispatchEvent(event);
+                if (doc.body) doc.body.dispatchEvent(event);
+            } catch (e) { /* cross-origin blocked */ }
+        }
+
+        // Attach touch events to gamepad buttons
+        document.querySelectorAll('.vgamepad__btn[data-key], .vgamepad__action[data-key]').forEach(btn => {
+            let interval;
+            btn.addEventListener('touchstart', e => {
+                e.preventDefault(); e.stopPropagation();
+                btn.classList.add('pressed');
+                const key = btn.dataset.key;
+                sendKeyToIframe(key, 'keydown');
+                interval = setInterval(() => sendKeyToIframe(key, 'keydown'), 80);
+            }, { passive: false });
+            btn.addEventListener('touchend', e => {
+                e.preventDefault(); e.stopPropagation();
+                btn.classList.remove('pressed');
+                clearInterval(interval);
+                sendKeyToIframe(btn.dataset.key, 'keyup');
+            }, { passive: false });
+            btn.addEventListener('touchcancel', () => {
+                btn.classList.remove('pressed');
+                clearInterval(interval);
+            });
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeGame(); });
+    </script>
+</body>
+
+</html>

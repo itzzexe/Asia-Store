@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="آسيا ستور - سياسة الاسترجاع والاستبدال. رضاك هو أولويتنا">
+    <title>الاسترجاع | آسيا ستور - Asia Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Outfit:wght@300;400;500;600;700;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/support-pages.css">
+</head>
+
+<body>
+    <div class="page-transition">
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container container--wide">
+            <a href="../index.html" class="header__logo"><img src="../assets/logo.svg" alt="Asia Store Logo"><span
+                    class="header__logo-text">Asia Store</span></a>
+            <nav class="header__nav" id="mainNav">
+                <ul class="header__nav-list">
+                    <li><a href="../index.html" class="header__nav-link" data-i18n="nav_home">الرئيسية</a></li>
+                    <li><a href="products.html" class="header__nav-link" data-i18n="nav_products">المنتجات</a></li>
+                    <li><a href="about.html" class="header__nav-link" data-i18n="nav_about">من نحن</a></li>
+                    <li><a href="contact.html" class="header__nav-link" data-i18n="nav_contact">تواصل معنا</a></li>
+                </ul>
+                <div class="lang-switcher"><button class="lang-btn active" data-lang="ar">عربي</button><button
+                        class="lang-btn" data-lang="en">EN</button></div>
+            </nav>
+            <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="support-hero noise-overlay">
+        <div class="bg-orb bg-orb--pink" style="width:300px;height:300px;top:-80px;right:-80px;"></div>
+        <div class="bg-orb bg-orb--blue" style="width:250px;height:250px;bottom:-50px;left:-50px;"></div>
+        <div class="container" style="position:relative;z-index:2;">
+            <div class="support-hero__icon hero-text-animate">🔄</div>
+            <span class="section-header__label hero-text-animate" data-i18n="returns_hero_label">سياسة الاسترجاع</span>
+            <h1 class="section-header__title hero-text-animate" style="font-size:var(--fs-hero);"
+                data-i18n="returns_hero_title">استرجاع واستبدال سهل</h1>
+            <p class="section-header__subtitle hero-text-animate" data-i18n="returns_hero_subtitle">رضاك هو أولويتنا.
+                جعلنا عملية الاسترجاع بسيطة وشفافة.</p>
+        </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="section">
+        <div class="container container--narrow">
+            <p class="support-intro reveal" data-i18n="returns_intro">نريد أن تكون راضياً تماماً عن مشترياتك. إذا احتجت
+                لاسترجاع أو استبدال منتج لأي سبب، نحن هنا لمساعدتك.</p>
+        </div>
+    </section>
+
+    <!-- Eligibility -->
+    <section class="section" style="padding-top:0;">
+        <div class="container">
+            <h2 class="section-header__title reveal" style="text-align:center;margin-bottom:var(--space-3xl);"
+                data-i18n="returns_eligibility_title">شروط الاسترجاع</h2>
+            <div class="support-cards-grid">
+                <div class="support-info-card reveal delay-1">
+                    <div class="support-info-card__icon">📅</div>
+                    <h3 class="support-info-card__title" data-i18n="returns_e1_title">7 أيام للاسترجاع</h3>
+                    <p class="support-info-card__desc" data-i18n="returns_e1_desc">يمكن إرجاع المنتجات خلال 7 أيام من
+                        الشراء، شريطة أن تكون بحالتها الأصلية.</p>
+                </div>
+                <div class="support-info-card reveal delay-2">
+                    <div class="support-info-card__icon">📦</div>
+                    <h3 class="support-info-card__title" data-i18n="returns_e2_title">الحالة الأصلية مطلوبة</h3>
+                    <p class="support-info-card__desc" data-i18n="returns_e2_desc">يجب أن تكون المنتجات غير مستخدمة، في
+                        تغليفها الأصلي مع جميع الأختام سليمة.</p>
+                </div>
+                <div class="support-info-card reveal delay-3">
+                    <div class="support-info-card__icon">🧾</div>
+                    <h3 class="support-info-card__title" data-i18n="returns_e3_title">إثبات الشراء</h3>
+                    <p class="support-info-card__desc" data-i18n="returns_e3_desc">إيصال شراء صالح من آسيا ستور مطلوب
+                        لجميع عمليات الاسترجاع والاستبدال.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Non-returnable -->
+    <section class="section" style="background:var(--surface-dark-elevated);">
+        <div class="container container--narrow">
+            <h2 class="section-header__title reveal" style="text-align:center;margin-bottom:var(--space-3xl);"
+                data-i18n="returns_non_returnable_title">المنتجات غير القابلة للإرجاع</h2>
+            <ul class="support-list">
+                <li class="support-list__item reveal delay-1"><span class="support-list__icon">✕</span><span
+                        data-i18n="returns_nr1">البرمجيات المفتوحة أو المنتجات الرقمية أو الأجهزة المفعّلة</span></li>
+                <li class="support-list__item reveal delay-2"><span class="support-list__icon">✕</span><span
+                        data-i18n="returns_nr2">المنتجات ذات الأختام الأمنية المزالة أو التالفة</span></li>
+                <li class="support-list__item reveal delay-3"><span class="support-list__icon">✕</span><span
+                        data-i18n="returns_nr3">المنتجات المخصصة أو المُعدّة حسب الطلب</span></li>
+                <li class="support-list__item reveal delay-4"><span class="support-list__icon">✕</span><span
+                        data-i18n="returns_nr4">المنتجات التي تظهر عليها علامات الاستخدام أو التلف</span></li>
+                <li class="support-list__item reveal delay-5"><span class="support-list__icon">✕</span><span
+                        data-i18n="returns_nr5">المواد الاستهلاكية (واقيات الشاشة، الأغطية بعد الاستخدام)</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-header__title reveal" style="text-align:center;margin-bottom:var(--space-3xl);"
+                data-i18n="returns_process_title">خطوات الاسترجاع</h2>
+            <div class="steps-grid">
+                <div class="step-card reveal delay-1">
+                    <div class="step-card__number">1</div>
+                    <h3 class="step-card__title" data-i18n="returns_step1_title">بدء الاسترجاع</h3>
+                    <p class="step-card__desc" data-i18n="returns_step1_desc">تواصل معنا خلال 7 أيام من الشراء.</p>
+                </div>
+                <div class="step-card reveal delay-2">
+                    <div class="step-card__number">2</div>
+                    <h3 class="step-card__title" data-i18n="returns_step2_title">إحضار للمتجر</h3>
+                    <p class="step-card__desc" data-i18n="returns_step2_desc">أحضر المنتج مع جميع التغليف الأصلي وإيصال
+                        الشراء.</p>
+                </div>
+                <div class="step-card reveal delay-3">
+                    <div class="step-card__number">3</div>
+                    <h3 class="step-card__title" data-i18n="returns_step3_title">الفحص</h3>
+                    <p class="step-card__desc" data-i18n="returns_step3_desc">فريقنا سيفحص المنتج للتحقق من استيفائه
+                        لشروط الاسترجاع.</p>
+                </div>
+                <div class="step-card reveal delay-4">
+                    <div class="step-card__number">4</div>
+                    <h3 class="step-card__title" data-i18n="returns_step4_title">استرداد أو استبدال</h3>
+                    <p class="step-card__desc" data-i18n="returns_step4_desc">اختر بين استرداد كامل المبلغ أو استبدال
+                        بمنتج آخر.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exchange & Defective -->
+    <section class="section" style="background:var(--surface-dark-elevated);">
+        <div class="container">
+            <div class="support-highlight-grid">
+                <div class="support-highlight-card reveal delay-1">
+                    <div class="support-highlight-card__icon">🔁</div>
+                    <h3 data-i18n="returns_exchange_title">سياسة الاستبدال</h3>
+                    <p data-i18n="returns_exchange_desc">نوفر خيار الاستبدال بنفس المنتج (لون/سعة مختلفة) أو منتج مختلف
+                        مع تعديل السعر. الاستبدال يخضع لتوفر المنتج.</p>
+                </div>
+                <div class="support-highlight-card support-highlight-card--alert reveal delay-2">
+                    <div class="support-highlight-card__icon">⚠️</div>
+                    <h3 data-i18n="returns_defective_title">المنتجات المعيبة</h3>
+                    <p data-i18n="returns_defective_desc">إذا استلمت منتجاً معيباً، نقدم استبدالاً فورياً أو استرداداً
+                        كاملاً بغض النظر عن حالة الفتح. يجب تقديم المطالبة خلال 48 ساعة من الشراء.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand"><img src="../assets/logo.svg" alt="Asia Store">
+                    <p data-i18n="footer_desc">وجهتك المميزة لأحدث الأجهزة الذكية منذ 2011.</p>
+                    <div class="footer__social"><a href="https://www.instagram.com/asia.store.iq"
+                            target="_blank">📷</a><a href="https://www.facebook.com/share/1KiaEUe9XV"
+                            target="_blank">📘</a><a href="https://www.tiktok.com/@asia.store24" target="_blank">🎵</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer__title" data-i18n="footer_quick">روابط سريعة</h4>
+                    <ul class="footer__links">
+                        <li><a href="../index.html" data-i18n="nav_home">الرئيسية</a></li>
+                        <li><a href="products.html" data-i18n="nav_products">المنتجات</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">من نحن</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__title" data-i18n="footer_support">الدعم</h4>
+                    <ul class="footer__links">
+                        <li><a href="warranty.html" data-i18n="footer_warranty">سياسة الضمان</a></li>
+                        <li><a href="returns.html" data-i18n="footer_returns">الاسترجاع</a></li>
+                        <li><a href="faq.html" data-i18n="footer_faq">الأسئلة الشائعة</a></li>
+                        <li><a href="privacy.html" data-i18n="footer_privacy">سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__title" data-i18n="footer_contact">معلومات التواصل</h4>
+                    <ul class="footer__links">
+                        <li>📍 بغداد – السبع أبكار</li>
+                        <li>📞 07746400400</li>
+                        <li>📞 07747400400</li>
+                        <li>🕒 10:00 ص – 10:00 م</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p data-i18n="footer_rights">© 2024 آسيا ستور. جميع الحقوق محفوظة.</p>
+                <p data-i18n="footer_tagline">حيث تبدأ التقنية بثقة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/cart.js"></script>
+</body>
+
+</html>

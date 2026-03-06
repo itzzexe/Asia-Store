@@ -1,0 +1,133 @@
+/* ========================================
+   ASIA STORE - Design Tokens & Variables
+   Colors extracted from logo: Pink → Purple → Blue gradient
+   ======================================== */
+
+:root {
+  /* Primary Brand Colors */
+  --color-pink: #FF6B9D;
+  --color-pink-light: #FF8FB8;
+  --color-magenta: #E84393;
+  --color-purple: #C084FC;
+  --color-purple-light: #D8B4FE;
+  --color-blue: #7C8CF8;
+  --color-blue-light: #93A0FA;
+  --color-navy: #0D1B4A;
+  --color-navy-light: #1B2D6B;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #FF6B9D 0%, #C084FC 50%, #7C8CF8 100%);
+  --gradient-primary-reverse: linear-gradient(135deg, #7C8CF8 0%, #C084FC 50%, #FF6B9D 100%);
+  --gradient-hero: linear-gradient(180deg, #0D1B4A 0%, #1a1a2e 50%, #16213e 100%);
+  --gradient-card: linear-gradient(145deg, rgba(255,107,157,0.1) 0%, rgba(192,132,252,0.1) 50%, rgba(124,140,248,0.05) 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  --gradient-dark: linear-gradient(180deg, #0a0a1a 0%, #0D1B4A 100%);
+  --gradient-text: linear-gradient(135deg, #FF6B9D, #C084FC, #7C8CF8);
+  
+  /* Neutral Colors */
+  --color-white: #FFFFFF;
+  --color-offwhite: #F8F9FA;
+  --color-gray-100: #F1F3F5;
+  --color-gray-200: #E9ECEF;
+  --color-gray-300: #DEE2E6;
+  --color-gray-400: #CED4DA;
+  --color-gray-500: #ADB5BD;
+  --color-gray-600: #868E96;
+  --color-gray-700: #495057;
+  --color-gray-800: #343A40;
+  --color-gray-900: #212529;
+  --color-black: #0a0a0a;
+  
+  /* Surfaces */
+  --surface-dark: #0a0a1a;
+  --surface-dark-elevated: #111128;
+  --surface-dark-card: rgba(255,255,255,0.04);
+  --surface-light: #FFFFFF;
+  --surface-light-elevated: #F8F9FA;
+  
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-arabic: 'Tajawal', 'Inter', sans-serif;
+  --font-display: 'Outfit', 'Inter', sans-serif;
+  
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2rem;
+  --fs-3xl: 2.5rem;
+  --fs-4xl: 3rem;
+  --fs-5xl: 3.5rem;
+  --fs-6xl: 4.5rem;
+  --fs-hero: clamp(2.5rem, 6vw, 5.5rem);
+  
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 900;
+  
+  --lh-tight: 1.1;
+  --lh-snug: 1.25;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.75;
+  
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+  --space-section: clamp(4rem, 10vw, 8rem);
+  
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  --radius-2xl: 2.5rem;
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.16);
+  --shadow-xl: 0 16px 60px rgba(0,0,0,0.2);
+  --shadow-glow-pink: 0 0 40px rgba(255,107,157,0.3);
+  --shadow-glow-purple: 0 0 40px rgba(192,132,252,0.3);
+  --shadow-glow-blue: 0 0 40px rgba(124,140,248,0.3);
+  --shadow-card-hover: 0 20px 60px rgba(0,0,0,0.25), 0 0 40px rgba(192,132,252,0.15);
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  /* Z-Index */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-header: 300;
+  --z-overlay: 400;
+  --z-modal: 500;
+  --z-toast: 600;
+  
+  /* Container */
+  --container-max: 1200px;
+  --container-wide: 1400px;
+  --container-narrow: 800px;
+  --container-padding: clamp(1rem, 4vw, 2rem);
+}
+
+/* RTL Direction for Arabic */
+[dir="rtl"] {
+  --font-primary: var(--font-arabic);
+}

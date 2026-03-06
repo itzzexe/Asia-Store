@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="آسيا ستور - قصة نجاح تمتد لأكثر من 15 عاماً في عالم التقنية">
+    <title>من نحن | آسيا ستور - Asia Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Outfit:wght@300;400;500;600;700;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+
+<body>
+    <!-- Page Transition -->
+    <div class="page-transition">
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container container--wide">
+            <a href="../index.html" class="header__logo">
+                <img src="../assets/logo.svg" alt="Asia Store Logo">
+                <span class="header__logo-text">Asia Store</span>
+            </a>
+            <nav class="header__nav" id="mainNav">
+                <ul class="header__nav-list">
+                    <li><a href="../index.html" class="header__nav-link" data-i18n="nav_home">الرئيسية</a></li>
+                    <li><a href="products.html" class="header__nav-link" data-i18n="nav_products">المنتجات</a></li>
+                    <li><a href="about.html" class="header__nav-link active" data-i18n="nav_about">من نحن</a></li>
+                    <li><a href="contact.html" class="header__nav-link" data-i18n="nav_contact">تواصل معنا</a></li>
+                </ul>
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="ar">عربي</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- About Hero -->
+    <section class="about-hero noise-overlay">
+        <div class="about-hero__bg">
+            <img src="../assets/images/store-interior.png" alt="Asia Store Interior">
+            <div class="about-hero__overlay"></div>
+        </div>
+        <div class="bg-orb bg-orb--pink" style="width:350px;height:350px;top:-80px;right:-80px;"></div>
+        <div class="bg-orb bg-orb--blue" style="width:300px;height:300px;bottom:-50px;left:-50px;"></div>
+
+        <div class="container">
+            <div class="about-hero__content">
+                <span class="section-header__label hero-text-animate" data-i18n="about_hero_label">قصتنا</span>
+                <h1 class="section-header__title hero-text-animate" style="font-size:var(--fs-hero);"
+                    data-i18n="about_hero_title">قصة بدأت بالرؤية واكتملت بالتطور</h1>
+                <p class="section-header__subtitle hero-text-animate" data-i18n="about_hero_subtitle">منذ عام 2011، نمت
+                    آسيا ستور من شغف بالتكنولوجيا إلى مركز تقني متكامل.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="section">
+        <div class="container container--narrow">
+            <div class="section-header reveal">
+                <h2 class="section-header__title" data-i18n="about_story_title">رحلتنا</h2>
+            </div>
+            <div class="reveal" style="margin-bottom:var(--space-xl);">
+                <p style="font-size:var(--fs-md);color:var(--color-gray-400);line-height:var(--lh-relaxed);margin-bottom:var(--space-lg);"
+                    data-i18n="about_story_p1">
+                    لم يكن آسيا ستور مجرد وليد صدفة، بل هو نتاج تخطيط استراتيجي بدأ منذ عام 2011. انطلقنا من شغف عميق
+                    بالتقنيات الحديثة، ومن متاجر بسيطة للهواتف الذكية شققنا طريقنا بثبات.
+                </p>
+                <p style="font-size:var(--fs-md);color:var(--color-gray-400);line-height:var(--lh-relaxed);"
+                    data-i18n="about_story_p2">
+                    في عام 2024، تبلورت هذه الرؤية ليولد آسيا ستور كمركز تقني متكامل، يجمع بين أحدث الحلول الذكية
+                    للمنازل وأقوى الأجهزة الذكية العالمية.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section"
+        style="background:var(--surface-dark-elevated);padding-top:var(--space-3xl);padding-bottom:var(--space-3xl);">
+        <div class="container">
+            <div class="stats-row">
+                <div class="stat-card reveal delay-1">
+                    <div class="stat-card__number" data-counter="15" data-counter-suffix="+">0</div>
+                    <div class="stat-card__label" data-i18n="stat_years">سنة خبرة</div>
+                </div>
+                <div class="stat-card reveal delay-2">
+                    <div class="stat-card__number" data-counter="500" data-counter-suffix="+">0</div>
+                    <div class="stat-card__label" data-i18n="stat_products">منتج</div>
+                </div>
+                <div class="stat-card reveal delay-3">
+                    <div class="stat-card__number" data-counter="10000" data-counter-suffix="+">0</div>
+                    <div class="stat-card__label" data-i18n="stat_customers">عميل سعيد</div>
+                </div>
+                <div class="stat-card reveal delay-4">
+                    <div class="stat-card__number" data-counter="50" data-counter-suffix="+">0</div>
+                    <div class="stat-card__label" data-i18n="stat_brands">علامة تجارية</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-header__label" data-i18n="about_story_title">رحلتنا</span>
+                <h2 class="section-header__title">2011 – 2024</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline__item reveal-left">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content">
+                        <div class="timeline__year">2011</div>
+                        <h3 class="timeline__title" data-i18n="timeline_2011_title">البداية</h3>
+                        <p class="timeline__desc" data-i18n="timeline_2011_desc">انطلقنا برؤية واضحة وشغف بالتكنولوجيا
+                            في السوق العراقي.</p>
+                    </div>
+                </div>
+
+                <div class="timeline__item reveal-right">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content">
+                        <div class="timeline__year">2015</div>
+                        <h3 class="timeline__title" data-i18n="timeline_2015_title">مرحلة النمو</h3>
+                        <p class="timeline__desc" data-i18n="timeline_2015_desc">وسّعنا مجموعة منتجاتنا وبنينا علاقات
+                            قوية مع العلامات التجارية العالمية.</p>
+                    </div>
+                </div>
+
+                <div class="timeline__item reveal-left">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content">
+                        <div class="timeline__year">2020</div>
+                        <h3 class="timeline__title" data-i18n="timeline_2020_title">التحول الرقمي</h3>
+                        <p class="timeline__desc" data-i18n="timeline_2020_desc">تبنينا التجارة الإلكترونية وحلول المنزل
+                            الذكي لخدمة المزيد من العملاء.</p>
+                    </div>
+                </div>
+
+                <div class="timeline__item reveal-right">
+                    <div class="timeline__dot"></div>
+                    <div class="timeline__content">
+                        <div class="timeline__year">2024</div>
+                        <h3 class="timeline__title" data-i18n="timeline_2024_title">آسيا ستور اليوم</h3>
+                        <p class="timeline__desc" data-i18n="timeline_2024_desc">مركز تقني متكامل يجمع بين أحدث الأجهزة
+                            والخدمة المتميزة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" style="background:var(--surface-dark-elevated);">
+        <div class="container">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4xl);align-items:center;">
+                <div class="reveal-left">
+                    <span class="section-header__label" data-i18n="about_experience_title">15 عاماً من الخبرة
+                        التقنية</span>
+                    <h2 style="font-size:var(--fs-4xl);font-weight:var(--fw-black);margin:var(--space-lg) 0;line-height:var(--lh-tight);"
+                        data-i18n="about_experience_title">15 عاماً من الخبرة التقنية</h2>
+                    <p style="font-size:var(--fs-md);color:var(--color-gray-400);line-height:var(--lh-relaxed);"
+                        data-i18n="about_experience_desc">
+                        نحن لا نتحدث عن أرقام، بل عن إرث من الخبرة الميدانية يمتد لأكثر من 15 عاماً.
+                    </p>
+                </div>
+                <div class="reveal-right">
+                    <img src="../assets/images/hero-tech.png" alt="Tech Devices"
+                        style="border-radius:var(--radius-xl);width:100%;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-header__label" data-i18n="features_label">لماذا آسيا ستور</span>
+                <h2 class="section-header__title" data-i18n="features_title">لماذا تختارنا؟</h2>
+                <p class="section-header__subtitle" data-i18n="features_subtitle">اختيارك لآسيا ستور يعني أنك اخترت راحة
+                    البال</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal delay-1 tilt-3d">
+                    <div class="feature-card__icon">🛡️</div>
+                    <h3 class="feature-card__title" data-i18n="f1_title">ضمان حقيقي</h3>
+                    <p class="feature-card__desc" data-i18n="f1_desc">ضمانات حقيقية تشمل العيوب المصنعية والأداء المستقر
+                    </p>
+                </div>
+                <div class="feature-card reveal delay-2 tilt-3d">
+                    <div class="feature-card__icon">🏢</div>
+                    <h3 class="feature-card__title" data-i18n="f2_title">متابعة كاملة مع الوكالات</h3>
+                    <p class="feature-card__desc" data-i18n="f2_desc">نحن نتولى مراجعة الوكالات الرسمية ومتابعة الصيانة
+                    </p>
+                </div>
+                <div class="feature-card reveal delay-3 tilt-3d">
+                    <div class="feature-card__icon">🎧</div>
+                    <h3 class="feature-card__title" data-i18n="f3_title">خدمات ما بعد البيع</h3>
+                    <p class="feature-card__desc" data-i18n="f3_desc">فريق متخصص يقدم استشارات تقنية ودعم فني مستمر</p>
+                </div>
+                <div class="feature-card reveal delay-4 tilt-3d">
+                    <div class="feature-card__icon">✅</div>
+                    <h3 class="feature-card__title" data-i18n="f4_title">منتجات أصلية 100%</h3>
+                    <p class="feature-card__desc" data-i18n="f4_desc">نتعامل مباشرة مع الوكلاء الرسميين لضمان وصول
+                        المنتج الأصلي</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <img src="../assets/logo.svg" alt="Asia Store">
+                    <p data-i18n="footer_desc">وجهتك المميزة لأحدث الأجهزة الذكية وحلول التكنولوجيا المبتكرة منذ 2011.
+                    </p>
+                    <div class="footer__social">
+                        <a href="https://www.instagram.com/asia.store.iq" target="_blank">📷</a>
+                        <a href="https://www.facebook.com/share/1KiaEUe9XV" target="_blank">📘</a>
+                        <a href="https://www.tiktok.com/@asia.store24" target="_blank">🎵</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer__title" data-i18n="footer_quick">روابط سريعة</h4>
+                    <ul class="footer__links">
+                        <li><a href="../index.html" data-i18n="nav_home">الرئيسية</a></li>
+                        <li><a href="products.html" data-i18n="nav_products">المنتجات</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">من نحن</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__title" data-i18n="footer_support">الدعم</h4>
+                    <ul class="footer__links">
+                        <li><a href="warranty.html" data-i18n="footer_warranty">سياسة الضمان</a></li>
+                        <li><a href="returns.html" data-i18n="footer_returns">الاسترجاع</a></li>
+                        <li><a href="faq.html" data-i18n="footer_faq">الأسئلة الشائعة</a></li>
+                        <li><a href="privacy.html" data-i18n="footer_privacy">سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__title" data-i18n="footer_contact">معلومات التواصل</h4>
+                    <ul class="footer__links">
+                        <li>📍 بغداد – السبع أبكار</li>
+                        <li>📞 07746400400</li>
+                        <li>📞 07747400400</li>
+                        <li>🕒 10:00 ص – 10:00 م</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p data-i18n="footer_rights">© 2024 آسيا ستور. جميع الحقوق محفوظة.</p>
+                <p data-i18n="footer_tagline">حيث تبدأ التقنية بثقة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
+    <style>
+        @media (max-width: 768px) {
+            [style*="grid-template-columns:1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="آسيا ستور - الأسئلة الشائعة حول منتجاتنا وخدماتنا وسياسات الضمان">
+    <title>الأسئلة الشائعة | آسيا ستور - Asia Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Outfit:wght@300;400;500;600;700;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/support-pages.css">
+</head>
+
+<body>
+    <div class="page-transition">
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container container--wide">
+            <a href="../index.html" class="header__logo"><img src="../assets/logo.svg" alt="Asia Store Logo"><span
+                    class="header__logo-text">Asia Store</span></a>
+            <nav class="header__nav" id="mainNav">
+                <ul class="header__nav-list">
+                    <li><a href="../index.html" class="header__nav-link" data-i18n="nav_home">الرئيسية</a></li>
+                    <li><a href="products.html" class="header__nav-link" data-i18n="nav_products">المنتجات</a></li>
+                    <li><a href="about.html" class="header__nav-link" data-i18n="nav_about">من نحن</a></li>
+                    <li><a href="contact.html" class="header__nav-link" data-i18n="nav_contact">تواصل معنا</a></li>
+                </ul>
+                <div class="lang-switcher"><button class="lang-btn active" data-lang="ar">عربي</button><button
+                        class="lang-btn" data-lang="en">EN</button></div>
+            </nav>
+            <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="support-hero noise-overlay">
+        <div class="bg-orb bg-orb--pink" style="width:300px;height:300px;top:-80px;right:-80px;"></div>
+        <div class="bg-orb bg-orb--blue" style="width:250px;height:250px;bottom:-50px;left:-50px;"></div>
+        <div class="container" style="position:relative;z-index:2;">
+            <div class="support-hero__icon hero-text-animate">❓</div>
+            <span class="section-header__label hero-text-animate" data-i18n="faq_hero_label">الأسئلة الشائعة</span>
+            <h1 class="section-header__title hero-text-animate" style="font-size:var(--fs-hero);"
+                data-i18n="faq_hero_title">الأسئلة المتكررة</h1>
+            <p class="section-header__subtitle hero-text-animate" data-i18n="faq_hero_subtitle">اعثر على إجابات لأكثر
+                الأسئلة شيوعاً حول منتجاتنا وخدماتنا.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Category Tabs -->
+    <section class="section">
+        <div class="container container--narrow">
+            <div class="faq-tabs reveal">
+                <button class="faq-tab active" data-faq-cat="all" data-i18n="view_all">الكل</button>
+                <button class="faq-tab" data-faq-cat="general" data-i18n="faq_general">عام</button>
+                <button class="faq-tab" data-faq-cat="products" data-i18n="faq_products">المنتجات</button>
+                <button class="faq-tab" data-faq-cat="warranty" data-i18n="faq_warranty_support">الضمان والدعم</button>
+                <button class="faq-tab" data-faq-cat="payment" data-i18n="faq_payment">الدفع والتوصيل</button>
+            </div>
+
+            <!-- FAQ Items -->
+            <div class="faq-list">
+                <!-- General -->
+                <div class="faq-item reveal" data-faq-cat="general">
+                    <button class="faq-item__question"><span data-i18n="faq_q1">ما هو آسيا ستور؟</span><span
+                            class="faq-item__arrow">▼</span></button>
+                    <div class="faq-item__answer">
+                        <p data-i18n="faq_a1">آسيا ستور هو مركز تقني متميز تأسس عام 2011...</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" data-faq-cat="general">
+                    <button class="faq-item__question"><span data-i18n="faq_q2">أين يقع آسيا ستور؟</span><span
+                            class="faq-item__arrow">▼</span></button>
+                    <div class="faq-item__answer">
+                        <p data-i18n="faq_a2">نحن في بغداد – السبع أبكار...</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" data-faq-cat="general">
+                    <button class="faq-item__question"><span data-i18n="faq_q3">ما هي أوقات الدوام؟</span><span
+                            class="faq-item__arrow">▼</span></button>
+                    <div class="faq-item__answer">
+                        <p data-i18n="faq_a3">نحن مفتوحون يومياً من 10:00 صباحاً...</p>
+                    </div>
+                </div>
+
+                <!-- Products -->
+                <div class="faq-item reveal" data-faq-cat="products">
+                    <button class="faq-item__question"><span data-i18n="faq_q4">هل جميع المنتجات أصلية؟</span><span
+                            class="faq-item__arrow">▼</span></button>
+                    <div class="faq-item__answer">
+                        <p data-i18n="faq_a4">نعم، 100% من منتجاتنا أصلية...</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" data-faq-cat="products">
+                    <button class="faq-item__question"><span data-i18n="faq_q5">ما هي العلامات التجارية
+                            المتوفرة؟</span><span class="faq-item__arrow">▼</span></button>
+                    <div class="faq-item__answer">
+                        <p data-i18n="faq_a5">نوفر جميع العلامات التجارية العالمية...</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" data-faq-cat="products">
+                    <button class="faq-item__question"><span data-i18n="faq_q6">هل يمكنني تجربة المنتج قبل
+                            الشراء؟</span><span class="faq-item__arrow">▼</span></button>
+                    <div class="faq-item__answer">
+                        <p data-i18n="faq_a6">بالتأكيد! نشجع العملاء على تجربة المنتجات...</p>
+                    </div>
+                </div>
+
+                <!-- Warranty -->
+                <div class="faq-item reveal" data-faq-cat="warranty">
+                    <button class="faq-item__question"><span data-i18n="faq_q7">ما الذي يغطيه الضمان؟</span><span
+                            class="faq-item__arrow">▼</span></button>
+                    <div class="faq-item__answer">
+                        <p data-i18n="faq_a7">يغطي ضماننا العيوب المصنعية...</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" data-faq-cat="warranty">
+                    <button class="faq-item__question"><span data-i18n="faq_q8">كيف أطالب بالضمان؟</span><span
+                            class="faq-item__arrow">▼</span></button>
+                    <div class="faq-item__answer">
+                        <p data-i18n="faq_a8">ببساطة أحضر جهازك وإيصال الشراء...</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" data-faq-cat="warranty">
+                    <button class="faq-item__question"><span data-i18n="faq_q9">هل تقدمون دعم ما بعد البيع؟</span><span
+                            class="faq-item__arrow">▼</span></button>
+                    <div class="faq-item__answer">
+                        <p data-i18n="faq_a9">نعم! فريق الدعم المتخصص لدينا...</p>
+                    </div>
+                </div>
+
+                <!-- Payment -->
+                <div class="faq-item reveal" data-faq-cat="payment">
+                    <button class="faq-item__question"><span data-i18n="faq_q10">ما هي طرق الدفع المقبولة؟</span><span
+                            class="faq-item__arrow">▼</span></button>
+                    <div class="faq-item__answer">
+                        <p data-i18n="faq_a10">نقبل الدفع النقدي والتحويل البنكي...</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" data-faq-cat="payment">
+                    <button class="faq-item__question"><span data-i18n="faq_q11">هل تقدمون خدمة التوصيل؟</span><span
+                            class="faq-item__arrow">▼</span></button>
+                    <div class="faq-item__answer">
+                        <p data-i18n="faq_a11">حالياً، عمليات الشراء تتم في المتجر...</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" data-faq-cat="payment">
+                    <button class="faq-item__question"><span data-i18n="faq_q12">هل يمكنني طلب منتج غير
+                            متوفر؟</span><span class="faq-item__arrow">▼</span></button>
+                    <div class="faq-item__answer">
+                        <p data-i18n="faq_a12">نعم، يمكننا طلب منتجات خاصة...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Still Have Questions CTA -->
+    <section class="section" style="background:var(--surface-dark-elevated);">
+        <div class="container" style="text-align:center;">
+            <div class="cta-box reveal" style="max-width:700px;margin:0 auto;">
+                <h2 style="font-size:var(--fs-3xl);font-weight:var(--fw-black);margin-bottom:var(--space-md);"
+                    data-i18n="faq_still_have">لا تزال لديك أسئلة؟</h2>
+                <p style="color:var(--color-gray-300);margin-bottom:var(--space-xl);" data-i18n="faq_contact_us">تواصل
+                    مع فريقنا وسنكون سعداء بمساعدتك.</p>
+                <div style="display:flex;gap:var(--space-md);justify-content:center;flex-wrap:wrap;">
+                    <a href="contact.html" class="btn btn--primary btn--lg" data-i18n="nav_contact">تواصل معنا</a>
+                    <a href="https://wa.me/9647746400400" target="_blank" class="btn btn--outline btn--lg"
+                        style="border-color:rgba(37,211,102,0.5);color:rgb(37,211,102);">💬 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand"><img src="../assets/logo.svg" alt="Asia Store">
+                    <p data-i18n="footer_desc">وجهتك المميزة لأحدث الأجهزة الذكية منذ 2011.</p>
+                    <div class="footer__social"><a href="https://www.instagram.com/asia.store.iq"
+                            target="_blank">📷</a><a href="https://www.facebook.com/share/1KiaEUe9XV"
+                            target="_blank">📘</a><a href="https://www.tiktok.com/@asia.store24" target="_blank">🎵</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer__title" data-i18n="footer_quick">روابط سريعة</h4>
+                    <ul class="footer__links">
+                        <li><a href="../index.html" data-i18n="nav_home">الرئيسية</a></li>
+                        <li><a href="products.html" data-i18n="nav_products">المنتجات</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">من نحن</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__title" data-i18n="footer_support">الدعم</h4>
+                    <ul class="footer__links">
+                        <li><a href="warranty.html" data-i18n="footer_warranty">سياسة الضمان</a></li>
+                        <li><a href="returns.html" data-i18n="footer_returns">الاسترجاع</a></li>
+                        <li><a href="faq.html" data-i18n="footer_faq">الأسئلة الشائعة</a></li>
+                        <li><a href="privacy.html" data-i18n="footer_privacy">سياسة الخصوصية</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__title" data-i18n="footer_contact">معلومات التواصل</h4>
+                    <ul class="footer__links">
+                        <li>📍 بغداد – السبع أبكار</li>
+                        <li>📞 07746400400</li>
+                        <li>📞 07747400400</li>
+                        <li>🕒 10:00 ص – 10:00 م</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p data-i18n="footer_rights">© 2024 آسيا ستور. جميع الحقوق محفوظة.</p>
+                <p data-i18n="footer_tagline">حيث تبدأ التقنية بثقة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/cart.js"></script>
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-item__question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const isOpen = item.classList.contains('open');
+                // Close all
+                document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+                // Toggle current
+                if (!isOpen) item.classList.add('open');
+            });
+        });
+
+        // FAQ Category Tabs
+        document.querySelectorAll('.faq-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.faq-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const cat = tab.dataset.faqCat;
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (cat === 'all' || item.dataset.faqCat === cat) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
